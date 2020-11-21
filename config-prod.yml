@@ -1,2 +1,16 @@
-config:
-  info: "master branch,springcloud-config/config-prod.yml version=1" 
+server:
+  port: 8082
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/springcloud_order?characterEncoding=utf8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: admin123
+  jpa:
+    show-sql: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
