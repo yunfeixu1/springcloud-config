@@ -17,5 +17,5 @@ eureka:
 env:
   1234567
 girl:
-  name: liliya
+  name: akali
   age: 18
