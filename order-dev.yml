@@ -10,6 +10,9 @@ spring:
     password: admin123
   jpa:
     show-sql: true
+  redis:
+    host: localhost
+    port: 6379
   rabbitmq:
     host: localhost
     port: 5672
