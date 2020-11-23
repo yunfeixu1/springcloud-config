@@ -1,3 +1,5 @@
+server:
+  port: 9000
 zuul:
   host:
     connect-timeout-millis: 15000 #HTTP连接超时大于Hystrix的超时时间
@@ -6,3 +8,5 @@ zuul:
     aaaaa:
       path: /myProduct/**
       serviceId: product
+  ignored-patterns:
+    - /**/product/listForOrder
