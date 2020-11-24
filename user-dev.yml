@@ -4,7 +4,7 @@ spring:
   application:
     name: user
   datasource:
-    url: jdbc:mysql://localhost:3306/User?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://localhost:3306/springcloud_user?characterEncoding=utf8&useSSL=false
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: admin123
