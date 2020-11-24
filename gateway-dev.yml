@@ -10,5 +10,5 @@ zuul:
     aaaaa:
       path: /myProduct/**
       serviceId: product
-  ignored-patterns:
-    - /**/product/listForOrder
+  #ignored-patterns:
+   # - /**/product/listForOrder
