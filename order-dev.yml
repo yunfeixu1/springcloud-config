@@ -8,6 +8,26 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: admin123
+    #设置zipkin的地址
+  zipkin:
+    base-url: http://localhost:9411/
+    #设置sleuth的抽样百分比
+  sleuth:
+    sampler:
+      probability: 1
+#在配置文件中配置Hystrix的服务降级，这里设置超时时间
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
+    getProductInfoList:  #为getProductInfoList方法单独设置一个超时时间
+       execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
   jpa:
     show-sql: true
   redis:
