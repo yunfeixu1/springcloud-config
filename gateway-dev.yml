@@ -3,13 +3,13 @@ server:
 zuul:
 #全局过滤敏感头Cookie，set-cookie,token
   sensitive-headers: 
-  host:
-    connect-timeout-millis: 20000 #HTTP连接超时大于Hystrix的超时时间
-    socket-timeout-millis: 60000  #socket超时
   routes:
     aaaaa:
       path: /myProduct/**
       serviceId: product
+ribbon:
+  ReadTimeout: 120000  #请求处理的超时时间
+  ConnectTimeout: 30000  #请求连接的超时时间
 #设置超时时间为5S
 hystrix:
   command:
